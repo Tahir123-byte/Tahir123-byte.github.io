@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiPing_introduce</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 800px; /* 设置固定宽度 */
+            margin: 40px auto; /* 垂直方向的边距和居中 */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .section {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .section-title {
+            background-color: #BAC9D4; /* 标题背景颜色淡蓝色 */
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .section-content {
+            background-color: #f7f7f7; /* 模块内容背景颜色浅灰色 */
+            padding: 15px;
+            font-size: 16px;
+            position: relative;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+
+            border: 2px solid #ddd;
+        }
+        .teacher-avatar {
+            /*position: absolute;*/
+            /*top: 15px;*/
+            /*right: 15px; !* 将导师头像移到右边 *!*/
+            /*height: auto;*/
+
+            /*height: auto; !* 高度自适应 *!*/
+            width: 100px; /* 固定宽度 */
+            height: 120px; /* 固定高度 */
+            border: 2px solid #ddd; /* 边框样式 */
+            position: absolute; /* 绝对定位 */
+            top: 15px; /* 距离顶部的距离 */
+            right: 15px; /* 距离右边的距离 */
+            border-radius: 10%; /* 设置为方形 */
+
+
+        }
+        .student-card {
+            display: flex;
+            align-items: flex-start; /* 内容靠上对齐 */
+            margin-bottom: 20px;
+        }
+        .student-info {
+            margin-left: 15px;
+            flex: 1; /* 让学生信息占用剩余空间 */
+        }
+        .student-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0;
+        }
+        .student-description {
+            margin: 5px 0 0;
+            line-height: 1.5; /* 调整行间距，增加可读性 */
+            text-align: justify; /* 使内容对齐，增强美观性 */
+        }
+        .section:hover {
+            background-color: #f0f0f0;
+        }
+        .selected {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1> </h1>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">基本信息</h2>
+        <div class="section-content">
+            <p>姓名: 李平</p>
+            <p>职称: 教授</p>
+            <p>院系: 计算机与软件学院</p>
+            <p>联系方式: pingkly@163.com</p>
+            <img src="assets/img/teacher/liping.png" alt="导师头像" class="avatar teacher-avatar"> <!-- 替换为实际头像路径 -->
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">个人简历</h2>
+        <div class="section-content">
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电子科技大学与德国波茨坦大学联合培养博士， 研究员，硕士生导师。香港理工大学博士后； 香港城市大学高级副研究员；四川省第十三批学术与技术带头人后备人选；ACM、中国计算机学会（CCF）专业会员，四川省人工智能专委会、自然语言处理专委会、大数据专委会委员。在IEEE TKDE、IEEE TNSE、New. J Phys.、 Phys.Rev.E、 Information Sciences等知名SCI期刊上发表SCI论文40余篇。主持国家自然科学基金项目2项，作为第一/第二合作人参与国家自然科学基金项目面上项目3项，主持四川省科技厅重点项目1项/省自然科学基金面上项目1项，授权国家发明专利16项；IEEE TNNLS、TCAS-I/II、TNSE、KBS、ESWA等多个国际知名期刊审稿人以及AAAI（18-22）等顶级会议PC Member。
+            </p>
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">主要研究方向</h2>
+        <div class="section-content">
+            <p>图挖掘、图深度学习及其应用、自然语言处理</p>
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">代表性成果</h2>
+        <div class="section-content">
+            <p>[1] Tianyi Gu, Kaiwen Huang, Jie Zhang, Kai Zhang and Ping Li（共同通讯作者）, "Fast Convolutional Factorization Machine with Enhanced Robustness," in IEEE Transactions on Knowledge and Data Engineering, 2021, early access, doi: 10.1109/TKDE.2021.3116352. （CCF A类，中科院二区）</p>
+            <p>[2] Guogen Tang, Ping Li（通讯作者）, Yupeng He, Yan Chen, Yuan Zhong, Fangji Gan, “Latent graph learning with dual-channel attention for relation extraction,” Knowledge-Based Systems, 252, 109471, 2022. （中科院一区）</p>
+            <p>[3] Wei Zhang, Yupeng He, Ping Li（通讯作者）, Yuan Zhong, Jin Zheng, “Graph regression for pressure peak prediction in fracturing processes,” Journal of Petroleum Science and Engineering, 213, 110323, 2022. （中科院二区）</p>
+            <p>[4] Yan Chen, Yulan Huang, Bo Miao, Yanchao Shi, Ping Li（通讯作者）, “Adaptive anomaly detection-based liquid loading prediction in shale gas wells,” Journal of Petroleum Science and Engineering, 214, 2022. （中科院二区）</p>
+            <p>[5] Biao Wang, Zhen Dai, Deshun Kong, Lanlan Yu, Jin Zheng, Ping Li（通讯作者）, “Boosting semi-supervised network representation learning with pseudo-multitasking,” Applied Intelligence,2022(7):52. （中科院二区）</p>
+            <p>[6] Yang Wang, Jin Zheng, Yuqi Du, Cheng Huang, Ping Li, “Traffic-GGNN: Predicting Traffic Flow via Attentional Spatial-Temporal Gated Graph Neural Networks,” IEEE Transactions on Intelligent Transportation Systems,2022, doi: 10.1109/TITS.2022.3168590. （中科院一区）</p>
+            <p>[7] Kaiqi Chen, Lanlan Yu, Tingting Zhu, Ping Li（通讯作者）, Jurgen Kurths, “Succinct Representation of Dynamic Networks,”  IEEE Transactions on Knowledge and Data Engineering, 2021(7):2983-2994. （CCF A类，中科院二区）</p>
+            <p>[8] Lanlan Yu, Ping Li（通讯作者）, Jie Zhang, and Jürgen Kurths, "Dynamic community discovery via common subspace projection." New Journal of Physics 23, no. 3 (2021): 033029.（中科院二区）</p>
+            <p>[9] Yan Chen, Yongfang Dai, Xiulong Han, Yi Ge, Hong Yin, and Ping Li（通讯作者）, "Dig users’ intentions via attention flow network for personalized recommendation." Information Sciences 547 (2021): 1122-1135. （中科院一区）</p>
+            <p>[10] Tingting Zhu, Ping Li（通讯作者）, Lanlan Yu, Kaiqi Chen, and Yan Chen, "Change point detection in dynamic networks based on community identification." IEEE Transactions on Network Science and Engineering 7, no. 3 (2020): 2067-2077. （中科院二区）</p>
+            <P>[11] Tingting Zhu, Xinyu Peng, Ping Li（通讯作者）, Kai Zhang, and Yan Chen. "Augmented label propagation for seed set expansion." Knowledge-Based Systems 179 (2019): 129-135. （中科院一区）</P>
+            <p>[12] Zhen Dai, Ping Li（通讯作者） Yan Chen, Kai Zhang, and Jie Zhang. "Influential node ranking via randomized spanning trees." Physica A: Statistical Mechanics and its Applications 526 (2019): 120625. （中科院二区）</p>
+            <p>[13] Yuan Zhong, Hongyu Yang, Yanci Zhang, and Ping Li. "Online random forests regression with memories." Knowledge-Based Systems 201 (2020): 106058. （中科院一区）</p>
+            <p>[14] Yuan Zhong, Hongyu Yang, Yanci Zhang, and Ping Li. "Online rebuilding regression random forests." Knowledge-Based Systems 221 (2021): 106960. （中科院一区）</p>
+            <p>[15] Jin Zheng, Yang Wang, Wanjun Xu, Zilu Gan, Ping Li, and Jiancheng Lv. "GSSA: Pay attention to graph feature importance for GCN via statistical self-attention." Neurocomputing 417 (2020): 458-470. （中科院二区）</p>
+        </div>
+    </div>
+
+    <div class="section" onclick="selectSection(this)">
+        <h2 class="section-title">优秀毕业学生</h2>
+        <div class="section-content">
+
+            <div class="student-card">
+                <img src="assets/img/student/LiPan.png" alt="李攀头像" class="avatar"> <!-- 替换为实际头像路径 -->
+                <div class="student-info">
+                    <p class="student-name">李攀 专业年级：计算机技术2021级（硕士）</p>
+                    <P class="student-description">现就职：中国国家图书馆</P>
+                    <p></p>
+                    <p class="student-description">
+                        履历：中共党员，在校期间曾任校研会学术交流部部长，曾获得研究生国家奖学金、校长奖学金、四川省优秀毕业生、优秀毕业论文、飞翔奖提名奖、研究生数学建模三等奖2次、一等学业奖学金、优秀研究生和优秀团员等40余项荣誉，在研究生期间以第一作者身份发表SCI-1区期刊论文1篇（引用量10余个）和NLP领域顶会EMNLP主会论文一篇，并前往新加坡参加国际顶级学术会议进行学术汇报和学术成果展示。在校期间，德智体美劳全面发展，积极参加学生工作，学科竞赛，科研项目实践，取得非常优异的成绩。
+                    </p>
+                    <p></p>
+
+                    <P class="student-description">寄语：不畏将来，不念过往；自强不息，勤学励志。</P>
+                </div>
+            </div>
+
+            <div class="student-card">
+                <img src="assets/img/student/huangjinchen.png" alt="黄金诚头像" class="avatar">
+                <div class="student-info">
+                    <p class="student-name">黄金诚 专业年级：电子信息2020级（硕士）</p>
+                    <P class="student-description">毕业去向：深造（电子科技大学）</P>
+                    <p></p>
+                    <p class="student-description">
+                        履历：在校期间曾任院研会干事，曾获得研究生国家奖学金、优秀研究生、优秀硕士毕业论文等奖励。第一作者身份在CCF-A类会议(ICML,WWW(硕士期间),IJCAI)发表3篇文章,以第一和共一作者在CCF-B类SCI期刊 ACM Trans.KDD（硕士期间）发表两篇文章，在CCF-C类会议IJCNN（硕士期间）发表文章一篇。担任NeurIPS2024，ICLR2025，AAAI2024,2025等会议的PC member，IEEE TKDE，ACM TKDD，IEEE TIP，IEEE TNNLS，Neuralcomputing等期刊的审稿人。授权国家发明专利授权4项，硕士期间曾在微软亚洲研究院（MSRA）实习。目前获得国家公派留学资格即将前往新加坡科技设计大学攻读作为联合培养博士深造。
+                    </p>
+                    <p></p>
+                    <P class="student-description"> 寄语：要相信自己的好运，做好充足的准备抓住每一次机会。</P>
+                </div>
+            </div>
+
+            <div class="student-card">
+                <img src="assets/img/student/huangrui.png" alt="黄睿头像" class="avatar">
+                <div class="student-info">
+                    <p class="student-name">黄睿 专业年级：计算机科学与技术2021级（硕士）</p>
+                    <P class="student-description">毕业去向：就业（成都市公安局武侯区分局）</P>
+                    <p></p>
+                    <p class="student-description">
+                        履历：中共党员。曾获优秀毕业生、优秀毕业论文和一等学业奖学金等荣誉。攻读硕士期间，以第一作者身份发表核心期刊论文2篇，分别刊登于SCI一区期刊Neural Networks和SCI一区期刊Knowledge-Based Systems上，授权国家发明专利1项。参与全国研究生数学建模竞赛获国家三等奖。
+                    </p>
+                    <p></p>
+                    <P class="student-description"> 寄语：千磨万击还坚劲，任尔东南西北风</P>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function selectSection(section) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(s => s.classList.remove('selected'));
+        section.classList.add('selected');
+    }
+</script>
+
+</body>
+</html>
